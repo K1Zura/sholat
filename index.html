@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jadwal Sholat</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: aquamarine;
+            text-align: center;
+            padding: 20px;
+            margin: 20px;
+        }
+        #jadwalSholat{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 20px;
+            align-items: center;
+            justify-content: center;
+        }
+        select, button {
+            margin-top: 10px;
+            margin-bottom: 10px;
+            padding: 10px;
+            font-size: 10px;
+        }
+        .jadwal-item{
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 600px;
+            padding: 20px;
+            background-color: rgb(85, 250, 48);
+            border: 1px solid rgb(85, 250, 48);
+            border-radius: 5px;
+            box-shadow: 0 20px 4px rgb(25, 193, 39);
+        }
+        .jadwal-item:hover{
+            background-color: aquamarine;
+            box-shadow: 0 20px 4px aquamarine;
+        }
+        .no-select{
+            user-select: none;
+        }
+    </style>
+</head>
+<body class="no-select">
+    <h1 style="font-family: 'Times New Roman', Times, serif;">Jadwal Sholat</h1>
+    <div>
+        <label for="kota">Pilih Kota</label>
+        <br>
+        <select name="kota" id="selectCity">
+            <option></option>
+        </select>
+        <br>
+        <button onclick="getJadwalSholat()">Lihat Jadwal</button>
+        <h1 id="jadwalSholat"></h1>
+        <div id="message">
+            <img src="images/sasa.webp" alt="" srcset="">
+        </div>
+    </div>
+    <script src="js/sholat.js"></script>
+</body>
+</html>
